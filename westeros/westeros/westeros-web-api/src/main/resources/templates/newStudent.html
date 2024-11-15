@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>nowy student</p>
+
+
+<form action="#" th:action="@{/saveStudent}" th:object="${student}" method="post">
+  <table border="1">
+    <input id="id" th:field="*{id}" type="hidden"/>
+    <tr>
+      <td>First Name<input type="text" th:field="*{firstName}"required></td></br>
+    </tr>
+    <tr>
+      <td>Last Name<input type="text" th:field="*{lastName}" required></td></br>
+    </tr>
+    <tr>
+      <td><input type="submit" value="submit"></td>
+
+    </tr>
+
+
+  </table>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>Student</p>
+<table border="1">
+  <thead>
+  <th>Id</th>
+  <th>First Name</th>
+
+  <th>Last Name</th>
+  <th>view Grades \</th>
+  <th>view Adresses</th>
+  <th>add adress</th>
+  <th>add grade</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td th:text="${student.id}"></td>
+    <td th:text="${student.firstName}"></td>
+
+    <td th:text="${student.lastName}"></td>
+
+    <td >
+      <a th:href="@{http://localhost:8081/{id}/grades(id=${student.id})}">view Grades </a>
+    </td>
+    <td >
+      <a th:href="@{http://localhost:8081/{id}/adresses(id=${student.id})}">view Adresses </a>
+
+    </td>
+    <td >
+      <a th:href="@{/newAddress/{id}(id=${student.id})}">Add adress </a>
+
+    </td>
+    <td >
+      <a th:href="@{/newGrade/{id}(id=${student.id})}">add grade </a>
+
+    </td>
+
+
+  </tbody>
+</table>
+
+<a href="http://localhost:8081/newStudent">Nowy student</a>
+</body>
+</html>

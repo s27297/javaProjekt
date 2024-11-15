@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>update student</p>
+
+
+<form action="#" th:action="@{/updateStudent}" th:object="${student}" method="post">
+    <table border="1">
+        <input id="id" th:field="*{id}" type="hidden"/>
+        <tr>
+            <td>First Name<input type="text" th:field="*{firstName}"required></td></br>
+        </tr>
+        <tr>
+            <td>Last NAme<input type="text" th:field="*{lastName}"min="0"></td></br>
+        </tr>
+<!--        <td>-->
+<!--            <ul>-->
+<!--                <li th:each="g : ${student.grades}" th:text="${g.getId()}"></li>-->
+<!--            </ul>-->
+<!--        </td>-->
+        <tr>
+            <td><input type="submit" value="submit"></td>
+
+        </tr>
+
+    </table>
+</form>
+
+
+</body>
+</html>

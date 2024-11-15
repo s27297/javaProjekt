@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>nowa ocena</p>
+
+
+<form action="#" th:action="@{/updateGrade}" th:object="${grade}" method="post">
+  <table border="1">
+    <input id="id" th:field="*{id}" type="hidden"/>
+    <tr>
+      <td>Subject<input type="text" th:field="*{subject}" required></td></br>
+    </tr>
+    <tr>
+      <td>Value<input type="text" th:field="*{grade}" maxlength="2" required></td></br>
+
+      <td><input type="submit"></td>
+
+    </tr>
+
+  </table>
+</form>
+
+
+</body>
+</html>

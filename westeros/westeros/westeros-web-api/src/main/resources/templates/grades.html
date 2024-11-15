@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Grades</p>
+<table border="1">
+    <thead>
+    <th>Id</th>
+    <th>Subject</th>
+
+    <th>Value</th>
+    <th>Delete</th>
+    <th>New Grade</th>
+    </thead>
+    <tbody>
+    <tr th:each="grad : ${grades}">
+        <td th:text="${grad.id}"></td>
+        <td th:text="${grad.subject}"></td>
+
+        <td th:text="${grad.grade}"></td>
+
+        <td >
+            <a th:href="@{/deleteGrade/{id}(id=${grad.id})}">Delete </a>
+        </td>
+        <td>
+            <a th:href="@{/newGrade/{id}(id=${grad.studentId})}">New Grade </a>
+
+
+        </td>
+        <td>
+            <a th:href="@{/updateGrade/{id}(id=${grad.id})}">Update </a>
+
+
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<a href="http://localhost:8081/all">Wroc do studentow</a>
+
+
+
+</body>
+</html>

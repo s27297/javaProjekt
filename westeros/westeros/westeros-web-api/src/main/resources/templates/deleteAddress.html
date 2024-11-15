@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>delete Adress</p>
+
+
+<form action="#" th:action="@{/deleteAddress}" th:object="${address}" method="post">
+    <table border="1">
+        <input id="id" th:field="*{id}" type="hidden"/>
+
+        <td><input type="submit" value="submit"></td>
+    </table>
+</form>
+
+
+</body>
+</html>
